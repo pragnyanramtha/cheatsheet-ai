@@ -1,20 +1,21 @@
 # CheatSheet AI - Free & Open Source
+### Remember that the purpose of acedemics is to assess your problem-solving skills and understanding. This tool works best when used to enhance your learning, not as a substitute for it.
+
+> ## MAC - LINUX SUPPORT
+>
+> I have only tested that **WINDOWS 11** operating system works, **Feel free to test mac and linux to check if they work properly** with the current version. If you are experiencing issues with your build:
+>
+> try building locally with electron builder.
+> open a issue for any bugs you face. ; )
 
 
-> ## 🔑 API KEY INFORMATION
->
-> I have only tested that Gemini **Gemini API keys are working** **Feel free to test OpenAI, and Anthropic APIs to check if theywork properly** with the current version. If you are experiencing issues with your API keys:
->
-> - Try deleting your API key entry from the config file located in your user data directory
-> - Log out and log back in to the application
-> - Check your API key dashboard to verify the key is active and has sufficient credits
-> - Ensure you're using the correct API key format (OpenAI keys start with "sk-", Gemini keys start with "AI", Anthropic keys start with "sk-ant-")
+
 
 ### Customization Possibilities
 
 The codebase is designed to be adaptable:
 
-- **AI Models**: Currently supports OpenAI, Google Gemini, and Anthropic Claude. You can modify the code to integrate with other providers like Deepseek, Llama, or any model with an API. All integration code is in `electron/ProcessingHelper.ts` and UI settings are in `src/components/Settings/SettingsDialog.tsx`.
+- **AI Models**: Currently supports gemini and groq api,You can modify the code to integrate with other providers like Deepseek, Llama, or any model with an API. All integration code is in `electron/ProcessingHelper.ts` and UI settings are in `src/components/Settings/SettingsDialog.tsx`.
 - **Languages**: Add support for additional programming languages
 - **Features**: Extend the functionality with new capabilities 
 - **UI**: Customize the interface to your preferences
@@ -69,9 +70,8 @@ The application uses undetectable global keyboard shortcuts that won't be detect
 
 ### AI Model Control
 - **Cycle Through Models**: `Ctrl/Cmd + \` (cycles through models in the same provider family)
-  - OpenAI: GPT-5 ↔ GPT-5-mini
   - Gemini: Pro → Flash → Lite → Pro
-  - Claude: Sonnet 4 → Sonnet 3.7 → Haiku 3.5 → Sonnet 4
+  - groq api models.
 
 ## Invisibility Compatibility
 
@@ -134,14 +134,14 @@ Note: The application is **NOT** invisible to:
 - **Ctrl+Down** - Move Window Down
 
 ### AI & Models
-- **Ctrl+\\** or **Alt+2** - Cycle Through Models (GPT-5 → GPT-5-mini → Gemini Pro → Gemini Flash → etc.)
+- **Ctrl+\\** or **Alt+2** - Cycle Through Models (Gemini Pro → Gemini Flash → Gemini Flash lite etc.)
 - **Ctrl+/** - Toggle Processing Mode (Image Mode ↔ Text Mode - Text mode is 5-10x faster for MCQs!)
 
 ### Copy & Paste
 - **Ctrl+Shift+C** - Copy HTML/Code to Clipboard
 - **Ctrl+Shift+D** - Copy CSS to Clipboard (extracts from `<style>` tags)
 - **Ctrl+Shift+V** - Type Clipboard Content (bypasses paste restrictions, faster speed)
-- **Ctrl+Shift+X** - Stop Typing (interrupts clipboard typing)
+- **esc* - Stop Typing (interrupts clipboard typing)
 
 ### Screenshot Management
 - **Ctrl+M** - Take Screenshot (alias for Ctrl+H)
@@ -234,7 +234,6 @@ The packaged applications will be available in the `release` directory.
 | Detailed Solution Explanations | ✅ | ✅ |
 | Window Management | ✅ | ✅ (Enhanced with keyboard shortcuts) |
 | Quick Model Switching | ❌ | ✅ |
-| Multiple AI Providers | ❌ | ✅ (OpenAI, Gemini, Claude) |
 | Code Clipboard | Limited | ✅ |
 | Auth System | Required | None (Simplified) |
 | Payment Processing | Required | None (Use your own API key) |
@@ -344,8 +343,6 @@ This tool is intended as a learning aid and practice assistant. While it can hel
 - Use this tool to learn concepts, not just to get answers
 - Recognize that understanding solutions is more valuable than simply presenting them
 - In take-home assignments, make sure you thoroughly understand any solutions you submit
-
-Remember that the purpose of technical interviews is to assess your problem-solving skills and understanding. This tool works best when used to enhance your learning, not as a substitute for it.
 
 ## Support and Questions
 
